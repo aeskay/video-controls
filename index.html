@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <main>
+    <header>
+      <h1 class="text-center">Video Control Using HTML5 and Javascript</h1>
+    </header>
+
+    <article>
+      <!-- <section>
+        <time date="2020-07-02" pubdate>July 2, 2020</time><br/>
+    <form>
+      <div class="form-group">
+        <input class="form-control" type="search" placeholder="Search Here">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Full Name"
+          pattern="[A-z]+\s[A-z]+"
+          title="Full Name"
+          data-content="Your full name is required here"
+          data-role="validate"
+          required>
+
+        <div class="invalid">
+          This should contain your first name and your last name
+        </div>
+        <input class="form-control" type="email" placeholder="email@email.mail" required>
+        <div class="invalid">
+          This should contain your email with an '@' symbol
+        </div>
+        <input class="form-control" type="month">
+        <input class="form-control" type="number">
+        <input class="form-control" type="tel" >
+        <input class="form-control" type="datetime-local">
+        <div class="row" style="margin-left: 2px;;">
+        <input style="display: inline-block;" class="col-lg-9 form-control-range"  id="formControlRange" type="range" min="0" max="10" step="2" value="0">
+        <span style="display: inline-block; font-weight: bold;" class="col-lg-3" id="demo">0</span>
+        </div>
+        <button type="submit">Submit</button>
+      </div>
+    </form><br/>
+    <progress max="100" value="30" style="height: 20px; width: 50%;"></progress>
+      </section> -->
+
+      <section>
+        <h4 class="text-center">This is a Video</h4>
+        <center>
+
+        <video id="vid"
+          style="border: 1px solid rgb(216, 216, 216)"
+          width="700px"  poster="poster.jpg"
+          preload="auto">
+          <source src="video.mp4">
+        </video>
+        </center><br/>
+
+        <div style="text-align: center; margin-bottom: 15px;" id="controls">
+          <div style="text-align: center;" class="row rangeRow"><input
+            id="vidRange"
+            type="range"
+            min="0"
+            max="20" step="1"
+            value="0"
+            class="form-control-range slider-width"
+          ><span id="curDur">00:00</span></div>
+          <button id="pauseBtn" class="d-inline">PLAY/PAUSE</button>
+          <button id="startBtn" class="d-inline"><<</button>
+          <button id="backBtn" class="d-inline"><</button>
+          <button id="forBtn" class="d-inline">></button>
+          <button id="endBtn" class="d-inline">>></button>
+          <button id="stopBtn" class="d-inline">STOP</button>
+        </div>
+
+        <div style="text-align: center;" id="muteSpeed">
+          <div class="col-lg-4 d-inline">
+            <input id="volRange" type="range" min="0" max="1" step="0.1"> <button id="muteBtn">MUTE</button>
+          </div>
+          <div class="col-lg-3 d-inline">
+
+          </div>
+          <div class="col-lg-4 d-inline" id="speedDiv">
+            <span>Speed (<span id="curSpeed">1.0</span>)</span><input value="1" id="speedRange" type="range" min="0.6" max="2" step="0.2">
+          </div>
+        </div>
+
+      </section>
+
+    </article>
+  </main>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
